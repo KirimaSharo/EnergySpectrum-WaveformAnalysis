@@ -1,0 +1,99 @@
+﻿  stdafx.cpp
+  Calculate.cpp
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\calculate.cpp(167): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\calculate.cpp(213): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\calculate.cpp(213): warning C4244: “参数”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\calculate.cpp(233): warning C4244: “=”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+  ESP.cpp
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(14): warning C4005: “DLL_A”: 宏重定义
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(4): note: 参见“DLL_A”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(94): warning C4273: “Analysis::EnergySP::EnergySP”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(73): note: 参见“{ctor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(103): warning C4273: “Analysis::EnergySP::EnergySP”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(74): note: 参见“{ctor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(139): warning C4273: “Analysis::EnergySP::~EnergySP”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(76): note: 参见“{dtor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(149): warning C4273: “Analysis::EnergySP::operator =”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(75): note: 参见“=”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(187): warning C4273: “Analysis::EnergySP::SmoothCore”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(81): note: 参见“SmoothCore”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(244): warning C4273: “Analysis::EnergySP::Smooth”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(64): note: 参见“Smooth”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(256): warning C4273: “Analysis::EnergySP::CalibrateX”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(79): note: 参见“CalibrateX”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(269): warning C4273: “Analysis::EnergySP::CalibrateY”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(80): note: 参见“CalibrateY”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(282): warning C4273: “Analysis::EnergySP::EMCore”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(82): note: 参见“EMCore”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(521): warning C4273: “Analysis::EnergySP::LMCore”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(83): note: 参见“LMCore”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(563): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(544): warning C4101: “l”: 未引用的局部变量
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(660): warning C4273: “Analysis::EnergySP::Analysis_Derivative”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(66): note: 参见“Analysis_Derivative”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(788): warning C4273: “Analysis::EnergySP::Analysis_ExpectMaxium”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(67): note: 参见“Analysis_ExpectMaxium”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(952): warning C4273: “Analysis::EnergySP::Analysis_LevenbergMarquardt”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(68): note: 参见“Analysis_LevenbergMarquardt”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(1116): warning C4273: “Analysis::EnergySP::Analysis_De_LM_EM”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(69): note: 参见“Analysis_De_LM_EM”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\esp.cpp(1282): warning C4273: “Analysis::EnergySP::RadioisotopeIdentificate”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(71): note: 参见“RadioisotopeIdentificate”的前一个定义
+  dllmain.cpp
+  Event.cpp
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\event.cpp(8): warning C4005: “DLL_A”: 宏重定义
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(4): note: 参见“DLL_A”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\event.cpp(13): warning C4273: “Analysis::Event::Event”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(140): note: 参见“{ctor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\event.cpp(19): warning C4273: “Analysis::Event::Event”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(141): note: 参见“{ctor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\event.cpp(30): warning C4273: “Analysis::Event::operator =”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(142): note: 参见“=”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\event.cpp(42): warning C4273: “Analysis::Event::~Event”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(143): note: 参见“{dtor}”的前一个定义
+  WaveForm.cpp
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(9): warning C4005: “DLL_A”: 宏重定义
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(4): note: 参见“DLL_A”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(152): warning C4273: “Analysis::WaveForm::CalibrateX”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(124): note: 参见“CalibrateX”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(165): warning C4273: “Analysis::WaveForm::CalibrateY”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(125): note: 参见“CalibrateY”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(177): warning C4273: “Analysis::WaveForm::WaveForm”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(119): note: 参见“{ctor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(186): warning C4273: “Analysis::WaveForm::WaveForm”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(120): note: 参见“{ctor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(221): warning C4273: “Analysis::WaveForm::operator =”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(121): note: 参见“=”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(261): warning C4273: “Analysis::WaveForm::~WaveForm”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(122): note: 参见“{dtor}”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(272): warning C4273: “Analysis::WaveForm::Analysis”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(99): note: 参见“Analysis”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(322): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(335): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(386): warning C4273: “Analysis::WaveForm::FFT”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(101): note: 参见“FFT”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(415): warning C4273: “Analysis::WaveForm::DNL”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(105): note: 参见“DNL”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(519): warning C4273: “Analysis::WaveForm::INL”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(107): note: 参见“INL”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(529): warning C4273: “Analysis::WaveForm::SNR”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(109): note: 参见“SNR”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(588): warning C4273: “Analysis::WaveForm::SINAD”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(111): note: 参见“SINAD”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(643): warning C4273: “Analysis::WaveForm::ENOB”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(113): note: 参见“ENOB”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(698): warning C4273: “Analysis::WaveForm::THD”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(117): note: 参见“THD”的前一个定义
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(766): warning C4273: “Analysis::WaveForm::SFDR”: dll 链接不一致
+  c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(115): note: 参见“SFDR”的前一个定义
+  正在生成代码...
+    正在创建库 C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\Debug\AnalysisLibrary.lib 和对象 C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\Debug\AnalysisLibrary.exp
+  AnalysisLibrary.vcxproj -> C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\Debug\AnalysisLibrary.dll
