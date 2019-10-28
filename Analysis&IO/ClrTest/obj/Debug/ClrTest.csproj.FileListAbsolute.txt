@@ -1,0 +1,10 @@
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\bin\Debug\ClrTest.exe.config
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\bin\Debug\ClrTest.exe
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\bin\Debug\ClrTest.pdb
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\bin\Debug\AnalysisClr.dll
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\bin\Debug\AnalysisClr.pdb
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\obj\Debug\ClrTest.csprojAssemblyReference.cache
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\obj\Debug\ClrTest.csproj.CoreCompileInputs.cache
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\obj\Debug\ClrTest.csproj.CopyComplete
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\obj\Debug\ClrTest.exe
+C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\ClrTest\obj\Debug\ClrTest.pdb

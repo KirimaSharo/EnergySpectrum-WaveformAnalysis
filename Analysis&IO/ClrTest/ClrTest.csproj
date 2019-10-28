@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AnalysisClr\AnalysisClr.vcxproj">
+      <Project>{d84f1c57-7431-4001-a201-f77b4996160e}</Project>
+      <Name>AnalysisClr</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
