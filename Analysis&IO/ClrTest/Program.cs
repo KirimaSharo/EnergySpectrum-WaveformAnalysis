@@ -12,8 +12,13 @@ namespace ClrTest
         static void Main(string[] args)
         {
             EnergySP e = new EnergySP();
-            e.Count[0] = 1;
-            Console.WriteLine(e.Count[0]);
+            int[] a=new int[2];
+            a[1] = 2;
+            e.Count = a;
+            e.Count[1] = 3;
+            a[1] = 1;
+            Console.WriteLine(e.Count[1]);
+            Console.ReadLine();
         }
     }
 }

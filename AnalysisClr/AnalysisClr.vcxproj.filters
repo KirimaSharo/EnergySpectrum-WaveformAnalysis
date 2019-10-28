@@ -35,9 +35,6 @@
     <ClCompile Include="AnalysisClr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="IOClr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

@@ -7,7 +7,7 @@
 
 #include"math.h"
 #include"Calculate.h"
-#include<Eigen/Dense>
+#include<Eigen/LU>
 
 #define PI 3.1415926535898
 

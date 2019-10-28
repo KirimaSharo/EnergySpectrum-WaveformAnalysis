@@ -6,7 +6,7 @@
 #include"math.h"
 #include"algorithm"
 #include"Calculate.h"
-#include<Eigen/Dense>
+#include<Eigen/LU>
 #define DLL_A _declspec(dllexport)
 #define PI 3.1415926535898
 using namespace Eigen;
