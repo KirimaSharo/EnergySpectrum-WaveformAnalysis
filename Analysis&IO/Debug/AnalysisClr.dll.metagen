@@ -1,0 +1,291 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly AnalysisClr, Version=0.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class AnalysisClr.ESPResult: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Peak : Public
+    Double FWHM : Public
+    Double Area : Public
+  Methods:
+    TSget(ESPResult* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class AnalysisClr.WaveResult: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Wavewidth : Public
+    Double RiseTime : Public
+    Double Max : Public
+    Double TimeofMax : Public
+    Double FallTime : Public
+    Double Area : Public
+  Methods:
+    TSget(WaveResult* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class AnalysisClr.SinWave: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Amp : Public
+    Double Freq : Public
+    Double Phase : Public
+  Methods:
+    TSget(SinWave* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    TSput(SinWave* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class AnalysisClr.AnalysisParam: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ESPCalibrationX : Public
+    System.String ESPCalibrationY : Public
+    System.String WaveCalibrationX : Public
+    System.String WaveCalibrationY : Public
+    Double WaveThreshold : Public
+    Int32 nmax : Public
+    Double ESPMaxResolution : Public
+  Methods:
+    TSput(AnalysisParam* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class AnalysisClr.Time: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Year : Public
+    Int32 Mon : Public
+    Int32 Day : Public
+    Int32 Hour : Public
+    Int32 Min : Public
+    Int32 Sec : Public
+Class AnalysisClr.EnergySP: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(AnalysisClr.EnergySP): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    AnalysisClr.Time UploadTime 'get set' : 
+    Double[] SmoothResult 'get ' : 
+    AnalysisClr.ESPResult[] AnalysisResult 'get ' : 
+    Int32 AnalysisResultLength 'get ' : 
+    Int32[] Count 'get set' : 
+    Int32 TotalChannel 'get ' : 
+  Methods:
+    get_TotalChannel(): PrivateScope, Public, HideBySig, SpecialName
+    get_Count(): PrivateScope, Public, HideBySig, SpecialName
+    set_Count(Int32[]): PrivateScope, Public, HideBySig, SpecialName
+    get_AnalysisResultLength(): PrivateScope, Public, HideBySig, SpecialName
+    get_AnalysisResult(): PrivateScope, Public, HideBySig, SpecialName
+    get_SmoothResult(): PrivateScope, Public, HideBySig, SpecialName
+    get_UploadTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_UploadTime(Time): PrivateScope, Public, HideBySig, SpecialName
+    Analysis_Derivative(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    Analysis_ExpectMaxium(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    Analysis_LevenbergMarquardt(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    Analysis_De_LM_EM(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    RadioisotopeIdentificate(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    op_Assign(EnergySP IsConst): PrivateScope, Public, HideBySig, SpecialName
+    ChangeCORE(EnergySP*): PrivateScope, Public, HideBySig
+    getCORE(EnergySP*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class AnalysisClr.WaveForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(AnalysisClr.WaveForm): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    AnalysisClr.Time UploadTime 'get set' : 
+    Double[] FFTResult 'get ' : 
+    AnalysisClr.WaveResult[] AnalysisResult 'get ' : 
+    Int32 AnalysisResultLength 'get ' : 
+    Double[] SampleValue 'get set' : 
+    Int32 TotalSample 'get ' : 
+  Methods:
+    get_TotalSample(): PrivateScope, Public, HideBySig, SpecialName
+    get_SampleValue(): PrivateScope, Public, HideBySig, SpecialName
+    set_SampleValue(Double[]): PrivateScope, Public, HideBySig, SpecialName
+    get_AnalysisResultLength(): PrivateScope, Public, HideBySig, SpecialName
+    get_AnalysisResult(): PrivateScope, Public, HideBySig, SpecialName
+    get_FFTResult(): PrivateScope, Public, HideBySig, SpecialName
+    get_UploadTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_UploadTime(Time): PrivateScope, Public, HideBySig, SpecialName
+    Analysis(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    FFT(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    SinFit(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    DNL(SinWave[], Int32, AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    INL(SinWave[], Int32, AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    SNR(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    SINAD(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    ENOB(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    SFDR(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    THD(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    op_Assign(WaveForm IsConst): PrivateScope, Public, HideBySig, SpecialName
+    ChangeCORE(WaveForm*): PrivateScope, Public, HideBySig
+    getCORE(WaveForm*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class AnalysisClr.Event: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(AnalysisClr.Event): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    AnalysisClr.Time UploadTime 'get set' : 
+    Byte source 'get set' : 
+    Double Area 'get set' : 
+    Double FallTime 'get set' : 
+    Double ArrivialTime 'get set' : 
+    Double RiseTime 'get set' : 
+    Double Amp 'get set' : 
+  Methods:
+    get_Amp(): PrivateScope, Public, HideBySig, SpecialName
+    set_Amp(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_RiseTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_RiseTime(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrivialTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrivialTime(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_FallTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_FallTime(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Area(): PrivateScope, Public, HideBySig, SpecialName
+    set_Area(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_source(): PrivateScope, Public, HideBySig, SpecialName
+    set_source(Byte): PrivateScope, Public, HideBySig, SpecialName
+    get_UploadTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_UploadTime(Time): PrivateScope, Public, HideBySig, SpecialName
+    op_Assign(Event IsConst): PrivateScope, Public, HideBySig, SpecialName
+    ChangeCORE(Event*): PrivateScope, Public, HideBySig
+    getCORE(Event*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class IOClr.StateNote: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Statenote : Public
+    Byte Paramsize : Public
+    System.String[] Paramnote : Public
+    Byte[] Paramstart : Public
+    Byte[] Paramend : Public
+  Methods:
+    TSget(StateNote* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class IOClr.StateCode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt16 STCode : Public
+    Int32[] Sparam : Public
+    AnalysisClr.Time Time : Public
+  Methods:
+    TSget(StateCode* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    TSput(StateCode* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    ParamNote(): PrivateScope, Public, HideBySig
+Class IOClr.WaveFormRaw: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    AnalysisClr.Time UploadTime 'get set' : 
+    Int32[] SampleValue 'get set' : 
+    Int32 TotalSample 'get ' : 
+  Methods:
+    get_TotalSample(): PrivateScope, Public, HideBySig, SpecialName
+    get_SampleValue(): PrivateScope, Public, HideBySig, SpecialName
+    set_SampleValue(Int32[]): PrivateScope, Public, HideBySig, SpecialName
+    get_UploadTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_UploadTime(Time): PrivateScope, Public, HideBySig, SpecialName
+    Transf(): PrivateScope, Public, HideBySig
+    ChangeCORE(WaveFormRaw*): PrivateScope, Public, HideBySig
+    getCORE(WaveFormRaw*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class IOClr.EventRaw: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    AnalysisClr.Time UploadTime 'get set' : 
+    Byte source 'get set' : 
+    Int32 Area 'get set' : 
+    Int32 FallTime 'get set' : 
+    Int32 ArrivialTime 'get set' : 
+    Int32 RiseTime 'get set' : 
+    Int32 Amp  'get set' : 
+  Methods:
+    get_Amp(): PrivateScope, Public, HideBySig, SpecialName
+    set_Amp(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_RiseTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_RiseTime(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ArrivialTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArrivialTime(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_FallTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_FallTime(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Area(): PrivateScope, Public, HideBySig, SpecialName
+    set_Area(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_source(): PrivateScope, Public, HideBySig, SpecialName
+    set_source(Byte): PrivateScope, Public, HideBySig, SpecialName
+    get_UploadTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_UploadTime(Time): PrivateScope, Public, HideBySig, SpecialName
+    Transf(): PrivateScope, Public, HideBySig
+    ChangeCORE(EventRaw*): PrivateScope, Public, HideBySig
+    getCORE(EventRaw*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class IOClr.Structedfile: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(IOClr.Structedfile): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    AnalysisClr.EnergySP[] Tsp 'get set' : 
+    IOClr.EventRaw[] Evt 'get set' : 
+    IOClr.WaveFormRaw[] Wav 'get set' : 
+    AnalysisClr.EnergySP[] Esp 'get set' : 
+    IOClr.StateCode[] State 'get set' : 
+    Int32 TotalTSP 'get ' : 
+    Int32 TotalEvt 'get ' : 
+    Int32 TotalWave 'get ' : 
+    Int32 TotalESP 'get ' : 
+    Int32 TotalState 'get ' : 
+    Int32 Run  'get set' : 
+    System.String filename 'get set' : 
+    System.String filepath 'get set' : 
+  Methods:
+    get_filepath(): PrivateScope, Public, HideBySig, SpecialName
+    set_filepath(String): PrivateScope, Public, HideBySig, SpecialName
+    get_filename(): PrivateScope, Public, HideBySig, SpecialName
+    set_filename(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Run(): PrivateScope, Public, HideBySig, SpecialName
+    set_Run(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalState(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalESP(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalWave(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalEvt(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalTSP(): PrivateScope, Public, HideBySig, SpecialName
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    set_State(StateCode[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Esp(): PrivateScope, Public, HideBySig, SpecialName
+    set_Esp(EnergySP[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Wav(): PrivateScope, Public, HideBySig, SpecialName
+    set_Wav(WaveFormRaw[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Evt(): PrivateScope, Public, HideBySig, SpecialName
+    set_Evt(EventRaw[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Tsp(): PrivateScope, Public, HideBySig, SpecialName
+    set_Tsp(EnergySP[]): PrivateScope, Public, HideBySig, SpecialName
+    ReadFile(String, String): PrivateScope, Public, HideBySig
+    WriteFile(String, String): PrivateScope, Public, HideBySig
+    op_Assign(Structedfile IsConst): PrivateScope, Public, HideBySig, SpecialName
+    ChangeCORE(Structedfile*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class IOClr.Rawdatafile: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(IOClr.Rawdatafile): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Int32 Run  'get set' : 
+    System.String filename 'get set' : 
+    System.String filepath 'get set' : 
+  Methods:
+    get_filepath(): PrivateScope, Public, HideBySig, SpecialName
+    set_filepath(String): PrivateScope, Public, HideBySig, SpecialName
+    get_filename(): PrivateScope, Public, HideBySig, SpecialName
+    set_filename(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Run(): PrivateScope, Public, HideBySig, SpecialName
+    set_Run(Int32): PrivateScope, Public, HideBySig, SpecialName
+    ReadFile(String, String): PrivateScope, Public, HideBySig
+    WriteFrame(IntPtr): PrivateScope, Public, HideBySig
+    AnalysisFrameCache(): PrivateScope, Public, HideBySig
+    WriteFile(String, String): PrivateScope, Public, HideBySig
+    AddOnFile(String, String): PrivateScope, Public, HideBySig
+    op_Assign(Rawdatafile IsConst): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

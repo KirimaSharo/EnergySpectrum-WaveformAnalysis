@@ -191,3 +191,21 @@ bool IOClr::Rawdatafile::AddOnFile(System::String^ filepath, System::String^ fil
 	fn = tmp1;
 	return CORE->AddOnFile(fp, fn);
 }
+IOClr::Rawdatafile::Rawdatafile()
+{
+	CORE = new IOLib::Rawdatafile();
+}
+IOClr::Rawdatafile::Rawdatafile(const Rawdatafile^ c)
+{
+	CORE = new IOLib::Rawdatafile(*c->CORE);
+}
+IOClr::Rawdatafile^ IOClr::Rawdatafile::operator = (const Rawdatafile^ c)
+{
+	delete CORE;
+	CORE = new IOLib::Rawdatafile(*c->CORE);
+	return this;
+}
+IOClr::Rawdatafile::~Rawdatafile()
+{
+	delete CORE;
+}

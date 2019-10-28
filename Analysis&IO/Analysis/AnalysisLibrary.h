@@ -100,7 +100,7 @@ namespace Analysis
 
 		bool FFT(AnalysisParam A);
 
-		SinWave* SinFit(AnalysisParam A);
+		SinWave* SinFit(AnalysisParam Anp);
 
 		double* DNL(SinWave* StandardWave, int NumberofSWave, AnalysisParam A, int& n);
 

@@ -541,7 +541,7 @@ namespace Analysis
 		
 		double u = (double)nb, p, F, Fnew;
 
-		int i, j, k, l;
+		int i, j, k;
 
 		double* count = CalibrateY(Anp);
 		double* channelX = CalibrateX(Anp);
@@ -555,13 +555,6 @@ namespace Analysis
 				else
 					Inb(i, j) = 0;
 			}
-
-
-		j = 0;
-		for (i = start; i <= end; i++)
-		{
-			j += count[i];
-		}
 
 
 		for (i = 0; i < n; i++)

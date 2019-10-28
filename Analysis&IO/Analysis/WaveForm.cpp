@@ -6,8 +6,10 @@
 #include"math.h"
 #include"algorithm"
 #include"Calculate.h"
+#include<Eigen/Dense>
 #define DLL_A _declspec(dllexport)
 #define PI 3.1415926535898
+using namespace Eigen;
 
 struct WRC
 {
@@ -813,5 +815,154 @@ namespace Analysis
 		x = nullptr;
 		ximag = nullptr;
 		return log(max / max2);
+	}
+
+	SinWave* WaveForm::SinFit(AnalysisParam Anp)
+	{
+		int Maxtime = Anp.nmax;
+		bool flag = false;
+		int nb = 3, nc = TotalSample;
+		double v = 2;
+
+		MatrixXd b, bnew, h, J, JT, A, Inb, g, f, L;
+		b.resize(nb, 1);
+		bnew.resize(nb, 1);
+		h.resize(nb, 1);
+		J.resize(nc, nb);
+		JT.resize(nb, nc);
+		A.resize(nb, nb);
+		Inb.resize(nb, nb);
+		g.resize(nb, 1);
+		f.resize(nc, 1);
+		L.resize(1, 1);
+
+		double e1 = 0, e2 = 0;
+		double u = (double)nb, p, F, Fnew;
+
+		int i, j;
+
+		double* count = CalibrateY(Anp);
+		double* channelX = CalibrateX(Anp);
+
+		for (i = 0; i < nb; i++)
+			for (j = 0; j < nb; j++)
+			{
+				if (i == j)
+					Inb(i, j) = 1;
+				else
+					Inb(i, j) = 0;
+			}
+
+		j = 0;
+		b(0, 0) = 0;
+		for (i = 1;i < TotalSample;i++)
+		{
+			b(0, 0) += abs(count[i] + count[i - 1]) / 2 * (channelX[i] - channelX[i - 1]);
+			if (count[i-1]<=0&&count[i]>0)
+			{
+				if (j == 0)
+				{
+					b(2, 0) = -channelX[i];
+				}
+				j++;
+			}
+		}
+		b(0, 0) = b(0, 0)*PI / 2 / (channelX[TotalSample - 1] - channelX[0]);
+		b(1, 0) = max(1, j) / (channelX[TotalSample - 1] - channelX[0]);
+		b(2, 0) = b(2, 0) / b(1, 0);
+		while (abs(b(2, 0)) > PI)
+		{
+			if (b(2, 0) > 0)
+			{
+				b(2, 0) = b(2, 0) - PI;
+			}
+			else
+			{
+				b(2, 0) = b(2, 0) + PI;
+			}
+		}
+		SinWave* ret = new SinWave;
+
+		for (i = 0; i < Maxtime; i++)
+		{
+			for (j = 0; j < nc; j++)
+			{
+				int x = j;
+				f(j, 0) = -count[x];
+
+				J(j, 0) = sin(b(1, 0)*channelX[x] + b(2, 0));
+				J(j, 1) = b(0, 0) *channelX[x] * cos(b(1, 0)*channelX[x] + b(2, 0));
+				J(j, 2) = b(0, 0)*cos(b(1, 0)*channelX[x] + b(2, 0));
+				f(j, 0) += b(0, 0) * J(j, 0);
+			}
+			JT = J.transpose();
+			f = -f;
+			int Judge = 0;
+		Loop:
+			if (Judge > Anp.nmax)
+			{
+				ret->Amp = b(0, 0);
+				ret->Freq = b(1, 0);
+				ret->Phase = b(2, 0);
+				return ret;
+			}
+			Judge++;
+			A = JT * J;
+			g = JT * f;
+			if (g.lpNorm<Infinity>() < e1)
+			{
+				flag = true;
+				break;
+			}
+			A = A + u * Inb;
+			h = A.inverse() * g;
+			if (h.lpNorm<Infinity>() < e2 * (b.lpNorm<Infinity>() + e2))
+			{
+				flag = true;
+				break;
+			}
+			bnew = b + h;
+			F = 0;
+			Fnew = 0;
+			for (j = 0; j < nc; j++)
+			{
+				int x = j;
+				F += f(j, 0);
+				Fnew += bnew(0, 0) * sin(b(1, 0)*channelX[x] + b(2, 0));
+			}
+			p = F - Fnew;
+			L = -h.transpose() * JT * f - 0.5 * h.transpose() * JT * J * h;
+			p = p / L(0, 0);
+			if (p > 0)
+			{
+				b = bnew;
+				while (abs(b(2, 0)) > PI)
+				{
+					if (b(2, 0) > 0)
+					{
+						b(2, 0) = b(2, 0) - PI;
+					}
+					else
+					{
+						b(2, 0) = b(2, 0) + PI;
+					}
+				}
+				u = max(1 / 3.0, 1 - pow(2 * p - 1, 3));
+				v = 2;
+			}
+			else
+			{
+				u = u * v;
+				v = 2 * v;
+				goto Loop;
+			}
+
+
+		}
+
+		ret->Amp = b(0, 0);
+		ret->Freq = b(1, 0);
+		ret->Phase = b(2, 0);
+		return ret;
 	}
 }
