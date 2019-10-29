@@ -75,11 +75,11 @@ Class AnalysisClr.EnergySP: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
     get_SmoothResult(): PrivateScope, Public, HideBySig, SpecialName
     get_UploadTime(): PrivateScope, Public, HideBySig, SpecialName
     set_UploadTime(Time): PrivateScope, Public, HideBySig, SpecialName
-    Analysis_Derivative(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    Analysis_ExpectMaxium(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    Analysis_LevenbergMarquardt(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    Analysis_De_LM_EM(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    RadioisotopeIdentificate(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    Analysis_Derivative(AnalysisParam): PrivateScope, Public, HideBySig
+    Analysis_ExpectMaxium(AnalysisParam): PrivateScope, Public, HideBySig
+    Analysis_LevenbergMarquardt(AnalysisParam): PrivateScope, Public, HideBySig
+    Analysis_De_LM_EM(AnalysisParam): PrivateScope, Public, HideBySig
+    RadioisotopeIdentificate(AnalysisParam): PrivateScope, Public, HideBySig
     op_Assign(EnergySP IsConst): PrivateScope, Public, HideBySig, SpecialName
     ChangeCORE(EnergySP*): PrivateScope, Public, HideBySig
     getCORE(EnergySP*): PrivateScope, Public, HideBySig
@@ -105,16 +105,16 @@ Class AnalysisClr.WaveForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
     get_FFTResult(): PrivateScope, Public, HideBySig, SpecialName
     get_UploadTime(): PrivateScope, Public, HideBySig, SpecialName
     set_UploadTime(Time): PrivateScope, Public, HideBySig, SpecialName
-    Analysis(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    FFT(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    SinFit(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    DNL(SinWave[], Int32, AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    INL(SinWave[], Int32, AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    SNR(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    SINAD(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    ENOB(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    SFDR(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
-    THD(AnalysisParam IsByValue): PrivateScope, Public, HideBySig
+    Analysis(AnalysisParam): PrivateScope, Public, HideBySig
+    FFT(AnalysisParam): PrivateScope, Public, HideBySig
+    SinFit(AnalysisParam): PrivateScope, Public, HideBySig
+    DNL(SinWave[], Int32, AnalysisParam): PrivateScope, Public, HideBySig
+    INL(SinWave[], Int32, AnalysisParam): PrivateScope, Public, HideBySig
+    SNR(AnalysisParam): PrivateScope, Public, HideBySig
+    SINAD(AnalysisParam): PrivateScope, Public, HideBySig
+    ENOB(AnalysisParam): PrivateScope, Public, HideBySig
+    SFDR(AnalysisParam): PrivateScope, Public, HideBySig
+    THD(AnalysisParam): PrivateScope, Public, HideBySig
     op_Assign(WaveForm IsConst): PrivateScope, Public, HideBySig, SpecialName
     ChangeCORE(WaveForm*): PrivateScope, Public, HideBySig
     getCORE(WaveForm*): PrivateScope, Public, HideBySig

@@ -282,6 +282,7 @@ namespace IOClr
 				array <StateCode^>^ ret = gcnew array<StateCode^>(TotalState);
 				for (int i = 0;i < TotalState;i++)
 				{
+					ret[i] = gcnew StateCode();
 					ret[i]->TSget(CORE->State[i]);
 				}
 				return ret;
@@ -307,6 +308,7 @@ namespace IOClr
 				array <AnalysisClr::EnergySP^>^ ret = gcnew array<AnalysisClr::EnergySP^>(TotalESP);
 				for (int i = 0;i < TotalESP;i++)
 				{
+					ret[i] = gcnew AnalysisClr::EnergySP();
 					ret[i]->ChangeCORE(&CORE->Esp[i]);
 				}
 				return ret;
@@ -332,6 +334,7 @@ namespace IOClr
 				array <WaveFormRaw^>^ ret = gcnew array<WaveFormRaw^>(TotalWave);
 				for (int i = 0;i < TotalWave;i++)
 				{
+					ret[i] = gcnew WaveFormRaw();
 					ret[i]->ChangeCORE(&CORE->Wav[i]);
 				}
 				return ret;
@@ -357,6 +360,7 @@ namespace IOClr
 				array <EventRaw^>^ ret = gcnew array<EventRaw^>(TotalEvt);
 				for (int i = 0;i < TotalEvt;i++)
 				{
+					ret[i] = gcnew EventRaw();
 					ret[i]->ChangeCORE(&CORE->Evt[i]);
 				}
 				return ret;
@@ -382,6 +386,7 @@ namespace IOClr
 				array <AnalysisClr::EnergySP^>^ ret = gcnew array<AnalysisClr::EnergySP^>(TotalTSP);
 				for (int i = 0;i < TotalTSP;i++)
 				{
+					ret[i] = gcnew AnalysisClr::EnergySP();
 					ret[i]->ChangeCORE(&CORE->Tsp[i]);
 				}
 				return ret;

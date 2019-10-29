@@ -115,6 +115,7 @@ namespace AnalysisClr
 				array <ESPResult^>^ret = gcnew array <ESPResult^>(AnalysisResultLength);
 				for (int i = 0;i < AnalysisResultLength;i++)
 				{
+					ret[i] = gcnew ESPResult();////////////////////////////////////////////////////////////////////////////////////////////////
 					ret[i]->TSget(CORE->AnalysisResult[i]);
 				}
 				return ret;
@@ -168,12 +169,12 @@ namespace AnalysisClr
 			}
 		}
 
-		bool Analysis_Derivative(AnalysisParam A);
-		bool Analysis_ExpectMaxium(AnalysisParam A);
-		bool Analysis_LevenbergMarquardt(AnalysisParam A);
-		bool Analysis_De_LM_EM(AnalysisParam A);
+		bool Analysis_Derivative(AnalysisParam^ A);
+		bool Analysis_ExpectMaxium(AnalysisParam^ A);
+		bool Analysis_LevenbergMarquardt(AnalysisParam^ A);
+		bool Analysis_De_LM_EM(AnalysisParam^ A);
 
-		System::String^ RadioisotopeIdentificate(AnalysisParam A);
+		System::String^ RadioisotopeIdentificate(AnalysisParam^ A);
 
 		EnergySP();
 		EnergySP(const EnergySP^ c);
@@ -237,6 +238,7 @@ namespace AnalysisClr
 				array <WaveResult^>^ret = gcnew array <WaveResult^>(AnalysisResultLength);
 				for (int i = 0;i < AnalysisResultLength;i++)
 				{
+					ret[i] = gcnew WaveResult();
 					ret[i]->TSget(CORE->AnalysisResult[i]);
 				}
 				return ret;
@@ -292,25 +294,25 @@ namespace AnalysisClr
 			}
 		}
 
-		bool Analysis(AnalysisParam A);
+		bool Analysis(AnalysisParam^ A);
 
-		bool FFT(AnalysisParam A);
+		bool FFT(AnalysisParam^ A);
 
-		SinWave^ SinFit(AnalysisParam A);
+		SinWave^ SinFit(AnalysisParam^ A);
 
-		array <System::Double>^ DNL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam A);
+		array <System::Double>^ DNL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam^ A);
 
-		array <System::Double>^ INL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam A);
+		array <System::Double>^ INL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam^ A);
 
-		System::Double SNR(AnalysisParam A);
+		System::Double SNR(AnalysisParam^ A);
 
-		System::Double SINAD(AnalysisParam A);
+		System::Double SINAD(AnalysisParam^ A);
 
-		System::Double ENOB(AnalysisParam A);
+		System::Double ENOB(AnalysisParam^ A);
 
-		System::Double SFDR(AnalysisParam A);
+		System::Double SFDR(AnalysisParam^ A);
 
-		System::Double THD(AnalysisParam A);
+		System::Double THD(AnalysisParam^ A);
 
 		WaveForm();
 		WaveForm(const WaveForm^ c);

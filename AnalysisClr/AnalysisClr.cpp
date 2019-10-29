@@ -48,35 +48,35 @@ void AnalysisClr::AnalysisParam::TSput(Analysis::AnalysisParam& dest)
 	dest.WaveThreshold = WaveThreshold;
 }
 
-bool AnalysisClr::EnergySP::Analysis_Derivative(AnalysisParam A)
+bool AnalysisClr::EnergySP::Analysis_Derivative(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->Analysis_Derivative(A1);
 }
-bool AnalysisClr::EnergySP::Analysis_ExpectMaxium(AnalysisParam A)
+bool AnalysisClr::EnergySP::Analysis_ExpectMaxium(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->Analysis_ExpectMaxium(A1);
 }
-bool AnalysisClr::EnergySP::Analysis_LevenbergMarquardt(AnalysisParam A)
+bool AnalysisClr::EnergySP::Analysis_LevenbergMarquardt(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->Analysis_LevenbergMarquardt(A1);
 }
-bool AnalysisClr::EnergySP::Analysis_De_LM_EM(AnalysisParam A)
+bool AnalysisClr::EnergySP::Analysis_De_LM_EM(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->Analysis_De_LM_EM(A1);
 }
 
-System::String^ AnalysisClr::EnergySP::RadioisotopeIdentificate(AnalysisParam A)
+System::String^ AnalysisClr::EnergySP::RadioisotopeIdentificate(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return gcnew System::String(CORE->RadioisotopeIdentificate(A1).c_str());
 }
 
@@ -99,30 +99,30 @@ AnalysisClr::EnergySP::~EnergySP()
 	delete CORE;
 }
 
-bool AnalysisClr::WaveForm::Analysis(AnalysisParam A)
+bool AnalysisClr::WaveForm::Analysis(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->Analysis(A1);
 }
 
-bool AnalysisClr::WaveForm::FFT(AnalysisParam A)
+bool AnalysisClr::WaveForm::FFT(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->FFT(A1);
 }
 
-AnalysisClr::SinWave^ AnalysisClr::WaveForm::SinFit(AnalysisParam A)
+AnalysisClr::SinWave^ AnalysisClr::WaveForm::SinFit(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	SinWave^ ret = gcnew SinWave();
 	ret->TSget(*CORE->SinFit(A1));
 	return ret;
 }
 
-array <System::Double>^ AnalysisClr::WaveForm::DNL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam A)
+array <System::Double>^ AnalysisClr::WaveForm::DNL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam^ A)
 {
 	Analysis::SinWave*stdw = new Analysis::SinWave[StandardWave->Length];
 	for (int i = 0;i < StandardWave->Length;i++)
@@ -131,7 +131,7 @@ array <System::Double>^ AnalysisClr::WaveForm::DNL(array <SinWave^>^ StandardWav
 	}
 	int n;
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	double*retd;
 	retd = CORE->DNL(stdw, StandardWave->Length, A1, n);
 	array <System::Double>^ ret = gcnew array <System::Double>(n);
@@ -142,7 +142,7 @@ array <System::Double>^ AnalysisClr::WaveForm::DNL(array <SinWave^>^ StandardWav
 	return ret;
 }
 
-array <System::Double>^ AnalysisClr::WaveForm::INL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam A)
+array <System::Double>^ AnalysisClr::WaveForm::INL(array <SinWave^>^ StandardWave, int NumberofSWave, AnalysisParam^ A)
 {
 	Analysis::SinWave*stdw = new Analysis::SinWave[StandardWave->Length];
 	for (int i = 0;i < StandardWave->Length;i++)
@@ -151,7 +151,7 @@ array <System::Double>^ AnalysisClr::WaveForm::INL(array <SinWave^>^ StandardWav
 	}
 	int n;
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	double*retd;
 	retd = CORE->INL(stdw, StandardWave->Length, A1, n);
 	array <System::Double>^ ret = gcnew array <System::Double>(n);
@@ -162,34 +162,34 @@ array <System::Double>^ AnalysisClr::WaveForm::INL(array <SinWave^>^ StandardWav
 	return ret;
 }
 
-System::Double AnalysisClr::WaveForm::SNR(AnalysisParam A)
+System::Double AnalysisClr::WaveForm::SNR(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->SNR(A1);
 }
-System::Double AnalysisClr::WaveForm::SINAD(AnalysisParam A)
+System::Double AnalysisClr::WaveForm::SINAD(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->SINAD(A1);
 }
-System::Double AnalysisClr::WaveForm::ENOB(AnalysisParam A)
+System::Double AnalysisClr::WaveForm::ENOB(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->ENOB(A1);
 }
-System::Double AnalysisClr::WaveForm::SFDR(AnalysisParam A)
+System::Double AnalysisClr::WaveForm::SFDR(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->SFDR(A1);
 }
-System::Double AnalysisClr::WaveForm::THD(AnalysisParam A)
+System::Double AnalysisClr::WaveForm::THD(AnalysisParam^ A)
 {
 	Analysis::AnalysisParam A1;
-	A.TSput(A1);
+	A->TSput(A1);
 	return CORE->THD(A1);
 }
 
