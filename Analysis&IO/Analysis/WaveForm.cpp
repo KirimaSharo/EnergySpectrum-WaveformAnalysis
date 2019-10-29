@@ -561,7 +561,7 @@ namespace Analysis
 
 		double max = -1;
 		int fmax;
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			if (Frq[i] > max)
 			{
@@ -574,9 +574,9 @@ namespace Analysis
 
 		for (int i = 1;i < 9;i++)
 		{
-			Frq[(i*fmax) % (n / 2)] = 0;
+			Frq[(i*fmax) % (n / 2 + 1)] = 0;
 		}
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			Noise += Frq[i];
 		}
@@ -620,7 +620,7 @@ namespace Analysis
 
 		double max = -1;
 		int fmax;
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			if (Frq[i] > max)
 			{
@@ -631,7 +631,7 @@ namespace Analysis
 
 		double ND = 0;
 
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			ND += Frq[i];
 		}
@@ -676,7 +676,7 @@ namespace Analysis
 
 		double max = -1;
 		int fmax;
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			if (Frq[i] > max)
 			{
@@ -687,7 +687,7 @@ namespace Analysis
 
 		double ND = 0;
 
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			ND += Frq[i];
 		}
@@ -732,7 +732,7 @@ namespace Analysis
 
 		double max = -1;
 		int fmax;
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			if (Frq[i] > max)
 			{
@@ -800,7 +800,7 @@ namespace Analysis
 
 		double max = -1;
 		double max2 = -1;
-		for (int i = 0;i < n / 2;i++)
+		for (int i = 0;i <= n / 2;i++)
 		{
 			if (Frq[i] > max)
 			{
