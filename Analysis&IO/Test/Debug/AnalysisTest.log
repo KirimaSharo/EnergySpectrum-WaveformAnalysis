@@ -1,1 +1,11 @@
-﻿  AnalysisTest.vcxproj -> C:\Users\Cocoa\source\repos\AnalysisLibrary\Debug\AnalysisTest.exe
+﻿  Test.cpp
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\iolibrary.h(65): warning C4251: “IOLib::Structedfile::filepath”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“IOLib::Structedfile”的客户端使用
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\iolibrary.h(66): warning C4251: “IOLib::Structedfile::filename”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“IOLib::Structedfile”的客户端使用
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\iolibrary.h(96): warning C4251: “IOLib::Rawdatafile::filepath”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“IOLib::Rawdatafile”的客户端使用
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\iolibrary.h(97): warning C4251: “IOLib::Rawdatafile::filename”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“IOLib::Rawdatafile”的客户端使用
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\test\test.cpp(12): warning C4326: “main”的返回类型应为“int”而非“void”
+  AnalysisTest.vcxproj -> C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\Debug\AnalysisTest.exe

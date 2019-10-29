@@ -399,7 +399,7 @@ namespace Analysis
 		FFTResult = nullptr;
 
 		double *ximag = new double[TotalSample];
-		FFTResult = CalibrateX(A);
+		FFTResult = CalibrateY(A);
 		for (i = 0;i < TotalSample;i++)
 		{
 			ximag[i] = 0;
@@ -536,7 +536,7 @@ namespace Analysis
 		double* Frq = new double[i];
 		double *ximag = new double[i];
 		int n = i;
-		double* x = CalibrateX(A);
+		double* x = CalibrateY(A);
 		for (i = 0;i < n;i++)
 		{
 			if (i < TotalSample)
@@ -595,7 +595,7 @@ namespace Analysis
 		double* Frq = new double[i];
 		double *ximag = new double[i];
 		int n = i;
-		double* x = CalibrateX(A);
+		double* x = CalibrateY(A);
 		for (i = 0;i < n;i++)
 		{
 			if (i < TotalSample)
@@ -639,6 +639,7 @@ namespace Analysis
 		Frq = nullptr;
 		x = nullptr;
 		ximag = nullptr;
+		ND -= max;
 		return 20*log(max / ND);
 	}
 	double WaveForm::ENOB(AnalysisParam A)
@@ -650,7 +651,7 @@ namespace Analysis
 		double* Frq = new double[i];
 		double *ximag = new double[i];
 		int n = i;
-		double* x = CalibrateX(A);
+		double* x = CalibrateY(A);
 		for (i = 0;i < n;i++)
 		{
 			if (i < TotalSample)
@@ -694,6 +695,7 @@ namespace Analysis
 		Frq = nullptr;
 		x = nullptr;
 		ximag = nullptr;
+		ND -= max;
 		return (20 * log(max / ND) - 1.76) / 6.02;
 	}
 	double WaveForm::THD(AnalysisParam A)
@@ -705,7 +707,7 @@ namespace Analysis
 		double* Frq = new double[i];
 		double *ximag = new double[i];
 		int n = i;
-		double* x = CalibrateX(A);
+		double* x = CalibrateY(A);
 		for (i = 0;i < n;i++)
 		{
 			if (i < TotalSample)
@@ -773,7 +775,7 @@ namespace Analysis
 		double* Frq = new double[i];
 		double *ximag = new double[i];
 		int n = i;
-		double* x = CalibrateX(A);
+		double* x = CalibrateY(A);
 		for (i = 0;i < n;i++)
 		{
 			if (i < TotalSample)

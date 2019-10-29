@@ -155,6 +155,7 @@ void main()
 	for (i = 0;i < 128;i++)
 	{
 		w.SampleValue[i] = i % 2;
+		//w.SampleValue[i] = sin(i*3.14 + 2 * i*3.14 + i / 3 * 3.14);
 	}
 	SinWave sine;
 	sine.Amp = 0.5;
@@ -168,5 +169,11 @@ void main()
 	{
 		cout << dnl[i] << "\n";
 	}
+	w.FFT(A);
+	for (i = 0;i < w.TotalSample;i++)
+	{
+		cout << w.FFTResult[i] << "\n";
+	}
+	cout << w.SINAD(A);
 	cin >> i;
 }

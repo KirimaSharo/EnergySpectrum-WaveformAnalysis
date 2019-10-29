@@ -86,13 +86,13 @@ c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(53
   c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(109): note: 参见“SNR”的前一个定义
 c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(590): warning C4273: “Analysis::WaveForm::SINAD”: dll 链接不一致
   c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(111): note: 参见“SINAD”的前一个定义
-c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(645): warning C4273: “Analysis::WaveForm::ENOB”: dll 链接不一致
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(646): warning C4273: “Analysis::WaveForm::ENOB”: dll 链接不一致
   c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(113): note: 参见“ENOB”的前一个定义
-c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(700): warning C4273: “Analysis::WaveForm::THD”: dll 链接不一致
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(702): warning C4273: “Analysis::WaveForm::THD”: dll 链接不一致
   c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(117): note: 参见“THD”的前一个定义
-c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(768): warning C4273: “Analysis::WaveForm::SFDR”: dll 链接不一致
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(770): warning C4273: “Analysis::WaveForm::SFDR”: dll 链接不一致
   c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(115): note: 参见“SFDR”的前一个定义
-c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(821): warning C4273: “Analysis::WaveForm::SinFit”: dll 链接不一致
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\waveform.cpp(823): warning C4273: “Analysis::WaveForm::SinFit”: dll 链接不一致
   c:\users\cocoa\source\repos\analysislibrary\analysis&io\analysis\analysislibrary.h(103): note: 参见“SinFit”的前一个定义
   正在生成代码...
     正在创建库 C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\Debug\AnalysisLibrary.lib 和对象 C:\Users\Cocoa\source\repos\AnalysisLibrary\Analysis&IO\Debug\AnalysisLibrary.exp
