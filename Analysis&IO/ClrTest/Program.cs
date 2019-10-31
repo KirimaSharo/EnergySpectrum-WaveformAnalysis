@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using AnalysisClr;
+using IOClr;
 
 namespace ClrTest
 {
@@ -17,7 +18,7 @@ namespace ClrTest
             A.ESPCalibrationY = "x";
             A.WaveCalibrationX = "x";
             A.WaveCalibrationY = "x";
-            A.WaveThreshold = 0;
+            A.WaveThreshold = 150;
             A.nmax = 10;
             A.ESPMaxResolution = 0.2;
 
@@ -40,6 +41,7 @@ namespace ClrTest
                 wav[i] = -1;
                 if (i % 2 == 0)
                     wav[i] = 1;
+                wav[i] = cnt[i];
             }
             w.SampleValue = wav;
             //e.Count = cnt;
@@ -49,13 +51,16 @@ namespace ClrTest
             //    Console.WriteLine(e.AnalysisResult[i].Peak);
             //}
 
-            bool bl=w.FFT(A);
+            bool bl=w.Analysis(A);
             Console.WriteLine(bl);
-            for (int i = 0; i < a; i++)
+            for (int i = 0; i < w.AnalysisResultLength; i++)
             {
-                Console.WriteLine(w.FFTResult[i]);
+                Console.WriteLine(w.AnalysisResult[i].TimeofMax);
             }
-                Console.ReadLine();
+            Structedfile sf = new Structedfile();
+            sf.ReadFile("", "1234");
+            sf.WriteFile("", "ABCD");
+            Console.ReadLine();
         }
     }
 }
