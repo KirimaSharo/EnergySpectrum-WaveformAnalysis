@@ -6,6 +6,15 @@ c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\structedfileio.
 c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\rawfileio.obj
 c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\rawclass.obj
 c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\dllmain.obj
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\debug\iolibrary.lib
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\debug\iolibrary.exp
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\debug\iolibrary.ilk
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\debug\iolibrary.dll
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\debug\iolibrary.pdb
 c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\iolibrary.tlog\cl.command.1.tlog
 c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\iolibrary.tlog\cl.read.1.tlog
 c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\iolibrary.tlog\cl.write.1.tlog
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\iolibrary.tlog\iolibrary.write.1u.tlog
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\iolibrary.tlog\link.command.1.tlog
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\iolibrary.tlog\link.read.1.tlog
+c:\users\cocoa\source\repos\analysislibrary\analysis&io\io\debug\iolibrary.tlog\link.write.1.tlog

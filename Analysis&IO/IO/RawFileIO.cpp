@@ -781,6 +781,7 @@ namespace IOLib
 			{
 				savestream.write((char*)cur->Framedata, cur->Flen * sizeof(UCHAR8));
 			}
+			cur = cur->Next;
 		}
 
 		cur = init;
@@ -790,6 +791,7 @@ namespace IOLib
 			{
 				savestream.write((char*)cur->Framedata, cur->Flen * sizeof(UCHAR8));
 			}
+			cur = cur->Next;
 		}
 
 		cur = init;
@@ -799,6 +801,7 @@ namespace IOLib
 			{
 				savestream.write((char*)cur->Framedata, cur->Flen * sizeof(UCHAR8));
 			}
+			cur = cur->Next;
 		}
 
 		cur = init;
@@ -808,6 +811,7 @@ namespace IOLib
 			{
 				savestream.write((char*)cur->Framedata, cur->Flen * sizeof(UCHAR8));
 			}
+			cur = cur->Next;
 		}
 
 		cur = init;
@@ -817,6 +821,7 @@ namespace IOLib
 			{
 				savestream.write((char*)cur->Framedata, cur->Flen * sizeof(UCHAR8));
 			}
+			cur = cur->Next;
 		}
 		savestream.close();
 		return true;
