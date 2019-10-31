@@ -57,9 +57,55 @@ namespace ClrTest
             {
                 Console.WriteLine(w.AnalysisResult[i].TimeofMax);
             }
-            Structedfile sf = new Structedfile();
-            sf.ReadFile("", "1234");
-            sf.WriteFile("", "ABCD");
+            //Structedfile sf = new Structedfile();
+            //sf.ReadFile("", "1234");
+            //sf.WriteFile("", "ABCD");
+
+            Byte[] Frame = { 0x55, 0xAA,
+                0x14,0x01,0xFD,0x00,0x01,0x00,0x04,
+                19,10,31,15,30,00,
+                0xEB,0x90,0xA1,0x0A,0x01,
+                0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                0xC1,0xA1,
+                0xEE
+            };
+            Rawdatafile raw = new Rawdatafile();
+            unsafe
+            {
+                Byte* FrameESP = stackalloc Byte[280];
+                for (int j = 0; j < 32; j++)
+                {
+                    for (int i = 0; i < 280; i++)
+                    {
+
+                        FrameESP[i] = Frame[i];
+                        FrameESP[i] = (Byte)i;
+                    }
+                    raw.WriteFrame((IntPtr)FrameESP);
+                }
+            }
+            raw.Run = 1000;
+
+            Structedfile strf = new Structedfile();
+            strf = raw.AnalysisFrameCache();
+            
+            
             Console.ReadLine();
         }
     }

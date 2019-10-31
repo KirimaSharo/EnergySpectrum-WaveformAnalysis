@@ -688,10 +688,10 @@ namespace IOLib
 			ps1 = (USHORT16*)cur->Framedata;
 			*ps1 = FRAMEHEAD;
 
-			ps1 = ps1 + sizeof(USHORT16);
+			ps1 = ps1 + 1;
 			*ps1 = ch2;
 
-			ps1 = ps1 + sizeof(USHORT16);
+			ps1 = ps1 + 1;
 			loadstream.read((char*)ps1, ch2*sizeof(UCHAR8));
 		}
 		this->filepath = filepath;
@@ -714,7 +714,7 @@ namespace IOLib
 			return false;
 		}
 		
-		ps1 = (USHORT16*)Framedata + sizeof(USHORT16);
+		ps1 = (USHORT16*)Framedata + 1;
 		s2 = *ps1;
 
 		if (init == nullptr)
@@ -1211,6 +1211,7 @@ namespace IOLib
 			{
 			//Log Error Cannot Analysis Frame
 			}
+			cur = cur->Next;
 		}
 
 		int InDiff = 0;

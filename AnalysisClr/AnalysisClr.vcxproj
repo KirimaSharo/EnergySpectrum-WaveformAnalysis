@@ -166,6 +166,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Analysis&amp;IO\Analysis\AnalysisLibrary.vcxproj">
+      <Project>{1559fe1e-b331-44fd-b45e-a3a9d728c759}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Analysis&amp;IO\IO\IOLibrary.vcxproj">
+      <Project>{016ecd4e-67c0-4b38-aa0c-bfaca3eac62f}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

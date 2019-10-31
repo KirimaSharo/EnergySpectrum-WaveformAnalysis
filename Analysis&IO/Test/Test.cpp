@@ -150,30 +150,64 @@ void main()
 	*/
 	//sf2.ReadFile("", "1234");
 	//sf2.WriteFile("", "A1234");
-	w.TotalSample = 128;
-	w.SampleValue = new double[128];
-	for (i = 0;i < 128;i++)
+	//w.TotalSample = 128;
+	//w.SampleValue = new double[128];
+	//for (i = 0;i < 128;i++)
+	//{
+	//	w.SampleValue[i] = i % 2;
+	//	//w.SampleValue[i] = sin(i*3.14 + 2 * i*3.14 + i / 3 * 3.14);
+	//}
+	//SinWave sine;
+	//sine.Amp = 0.5;
+	//sine.Freq = 0.5;
+	//sine.Phase = -0.25*3.1415926535898;
+	//A.WaveCalibrationX = "x";
+	//A.WaveCalibrationY = "x-0.5";
+	//int ndnl;
+	//double *dnl = w.DNL(&sine, 1, A, ndnl);
+	//for (i = 0;i < ndnl;i++)
+	//{
+	//	cout << dnl[i] << "\n";
+	//}
+	//w.FFT(A);
+	//for (i = 0;i < w.TotalSample;i++)
+	//{
+	//	cout << w.FFTResult[i] << "\n";
+	//}
+	//cout << w.SINAD(A);
+	unsigned char Frame[] = { 0x55, 0xAA,
+				0x14,0x01,0xFD,0x00,0x01,0x00,0x04,
+				19,10,31,15,30,00,
+				0xEB,0x90,0xA1,0x0A,0x01,
+				0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+				0xC1,0xA1,
+				0xEE
+	};
+
+
+	for (int j = 0; j < 32; j++)
 	{
-		w.SampleValue[i] = i % 2;
-		//w.SampleValue[i] = sin(i*3.14 + 2 * i*3.14 + i / 3 * 3.14);
+		Frame[20] = j;
+		rf.WriteFrame(Frame);
 	}
-	SinWave sine;
-	sine.Amp = 0.5;
-	sine.Freq = 0.5;
-	sine.Phase = -0.25*3.1415926535898;
-	A.WaveCalibrationX = "x";
-	A.WaveCalibrationY = "x-0.5";
-	int ndnl;
-	double *dnl = w.DNL(&sine, 1, A, ndnl);
-	for (i = 0;i < ndnl;i++)
-	{
-		cout << dnl[i] << "\n";
-	}
-	w.FFT(A);
-	for (i = 0;i < w.TotalSample;i++)
-	{
-		cout << w.FFTResult[i] << "\n";
-	}
-	cout << w.SINAD(A);
+	
+	rf.Run = 1000;
+	sf=rf.AnalysisFrameCache();
 	cin >> i;
 }
