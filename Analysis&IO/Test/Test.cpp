@@ -207,8 +207,15 @@ void main()
 		Frame[28] = j * 3;
 		rf.WriteFrame(Frame);
 	}
+	for (int j = 0; j < 32; j++)
+	{
+		Frame[20] = j;
+		Frame[28] = j * 3;
+		rf.WriteFrame(Frame);
+	}
 	
 	rf.Run = 1000;
 	sf=rf.AnalysisFrameCache();
+	sf.WriteFile("", "");
 	cin >> i;
 }

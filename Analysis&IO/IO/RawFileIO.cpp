@@ -722,6 +722,16 @@ namespace IOLib
 			cur = new FrameC;
 			init = cur;
 		}
+		else if (cur == nullptr)
+		{
+			cur = init;
+			while (cur->Next != nullptr)
+			{
+				cur = cur->Next;
+			}
+			cur->Next = new FrameC;
+			cur = cur->Next;
+		}
 		else
 		{
 			cur->Next = new FrameC;
@@ -774,6 +784,7 @@ namespace IOLib
 		filepath = filepath + "/" + filename + RAW_FILE_EXTENSION;
 		std::ofstream savestream(filepath, std::ios::out | std::ios::binary);
 		savestream.write((char*)&Run, sizeof(int));
+		FrameC* curlog = cur;
 		cur = init;
 		while (cur != nullptr)
 		{
@@ -824,6 +835,7 @@ namespace IOLib
 			cur = cur->Next;
 		}
 		savestream.close();
+		cur = curlog;
 		return true;
 	}
 
@@ -868,6 +880,7 @@ namespace IOLib
 		ret.filepath = filepath;
 		ret.filename = filename;
 		ret.Run = Run;
+		FrameC* curlog = cur;
 		cur = init;
 		UCHAR8 FlashCache[4 * FLS_PAYLOADLEN];
 		int UsedFlashCache = 0;
@@ -1433,6 +1446,7 @@ namespace IOLib
 			STinit = nullptr;
 		}
 
+		cur = curlog;
 		return ret;
 
 	}
