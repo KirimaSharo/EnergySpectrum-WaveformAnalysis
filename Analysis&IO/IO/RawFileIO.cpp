@@ -956,7 +956,7 @@ namespace IOLib
 						}
 						else if (((*(UCHAR8*)(FCache + 8))&((USHORT16)0xF0)) == RCAT_ESP)
 						{
-							if (*(FCache + 11) == 0)
+							if (*(FCache + 11) == 0 || ESPcur == nullptr)
 							{
 								if (ESPcur == nullptr)
 								{
@@ -987,7 +987,7 @@ namespace IOLib
 						}
 						else if (((*(UCHAR8*)(FCache + 8))&((USHORT16)0xF0)) == RCAT_TSP)
 						{
-							if (*(FCache + 11) == 0)
+							if (*(FCache + 11) == 0|| TSPcur == nullptr)
 							{
 								if (TSPcur == nullptr)
 								{
@@ -1018,7 +1018,7 @@ namespace IOLib
 						}
 						else if (((*(UCHAR8*)(FCache + 8))&((USHORT16)0xF0)) == RCAT_WAV)
 						{
-							if (*(FCache + 11) == 0)
+							if (*(FCache + 11) == 0|| WAVcur == nullptr)
 							{
 								if (WAVcur == nullptr)
 								{
@@ -1117,7 +1117,7 @@ namespace IOLib
 			}
 			else if(cur->Framedata[LOC_BYTE_DE_LOADCAT] == LOADCAT_ESP)
 			{
-				if (*(cur->Framedata + 20) == 0)
+				if (*(cur->Framedata + 20) == 0|| ESPcur == nullptr)
 				{
 					if (ESPcur == nullptr)
 					{
@@ -1146,7 +1146,7 @@ namespace IOLib
 			}
 			else if (cur->Framedata[LOC_BYTE_DE_LOADCAT] == LOADCAT_TSP)
 			{
-				if (*(cur->Framedata + 20) == 0)
+				if (*(cur->Framedata + 20) == 0|| TSPcur == nullptr)
 				{
 					if (TSPcur == nullptr)
 					{
@@ -1175,7 +1175,7 @@ namespace IOLib
 			}
 			else if (cur->Framedata[LOC_BYTE_DE_LOADCAT] == LOADCAT_WAV)
 			{
-				if (*(cur->Framedata + 20) == 0)
+				if (*(cur->Framedata + 20) == 0|| WAVcur == nullptr)
 				{
 					if (WAVcur == nullptr)
 					{
