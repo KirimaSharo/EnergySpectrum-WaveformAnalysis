@@ -68,6 +68,7 @@ AnalysisClr::WaveForm^ IOClr::WaveFormRaw::Transf()
 	{
 		value[i] = SampleValue[i];
 	}
+	ret->SampleValue = value;
 	ret->UploadTime = UploadTime;
 	return ret;
 }

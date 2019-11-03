@@ -61,6 +61,7 @@ namespace ClrTest
             sf.ReadFile("", "1234");
             Structedfile sf2 = new Structedfile();
             sf2 = sf;
+            w = sf2.Wav[0].Transf();
             sf2.WriteFile("", "ABCDEFG");
 
             //Byte[] Frame = { 0x55, 0xAA,
