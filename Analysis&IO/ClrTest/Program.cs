@@ -58,8 +58,10 @@ namespace ClrTest
                 Console.WriteLine(w.AnalysisResult[i].TimeofMax);
             }
             Structedfile sf = new Structedfile();
-            //sf.ReadFile("", "1234");
-            sf.WriteFile("", "ABCDE");
+            sf.ReadFile("", "1234");
+            Structedfile sf2 = new Structedfile();
+            sf2 = sf;
+            sf2.WriteFile("", "ABCDEFG");
 
             //Byte[] Frame = { 0x55, 0xAA,
             //    0x14,0x01,0xFD,0x00,0x01,0x00,0x04,

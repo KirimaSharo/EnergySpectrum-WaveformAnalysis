@@ -15,10 +15,12 @@ RawStateParams: 3 0 0 2 0 0
 
 State 1 :
 
-Upload Time: -842148551/-842150450/-842150451 -842150451:-842150451:-842150451
+Upload Time: 2019/10/31 15:30:0
 
-STCode: cdcd Resvered
-RawStateParams: cdcdcdcd cdcdcdcd cdcdcdcd cdcdcdcd cdcdcdcd cdcdcdcd 
+STCode: 202 CZTChThreshold
+(0)Channel: 3 
+(1-2)Thershold: 0 10 
+RawStateParams: 3 0 10 0 0 0 
 
 
 

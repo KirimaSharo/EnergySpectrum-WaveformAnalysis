@@ -170,7 +170,9 @@ bool IOClr::Rawdatafile::WriteFrame(System::IntPtr Framedata)
 IOClr::Structedfile^ IOClr::Rawdatafile::AnalysisFrameCache()
 {
 	IOClr::Structedfile^ ret = gcnew IOClr::Structedfile();
-	ret->ChangeCORE(& CORE->AnalysisFrameCache());
+	IOLib::Structedfile* cor = new IOLib::Structedfile();
+	*cor = CORE->AnalysisFrameCache();
+	ret->ChangeCORE(cor);
 	return ret;
 }
 bool IOClr::Rawdatafile::WriteFile(System::String^ filepath, System::String^ filename)
