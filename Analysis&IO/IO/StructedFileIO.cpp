@@ -544,7 +544,7 @@ namespace IOLib
 		if (TotalState > 0)
 		{
 			State = new IOLib::StateCode[TotalState];
-			for (int i = 0;i < TotalESP;i++)
+			for (int i = 0;i < TotalState;i++)
 			{
 				State[i] = c.State[i];
 			}
@@ -610,7 +610,7 @@ namespace IOLib
 		if (TotalState > 0)
 		{
 			State = new IOLib::StateCode[TotalState];
-			for (int i = 0;i < TotalESP;i++)
+			for (int i = 0;i < TotalState;i++)
 			{
 				State[i] = c.State[i];
 			}

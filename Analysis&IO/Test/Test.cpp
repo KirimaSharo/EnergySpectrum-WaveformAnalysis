@@ -207,15 +207,59 @@ void main()
 		Frame[28] = j * 3;
 		rf.WriteFrame(Frame);
 	}
-	for (int j = 0; j < 32; j++)
+	rf.Run = 1000;
+	sf = rf.AnalysisFrameCache();
+	sf.WriteFile("", "");
+
+	Frame[8] = 0x05;
+	Frame[17] = 0xB0;
+	for (int j = 0; j < 8; j++)
 	{
 		Frame[20] = j;
 		Frame[28] = j * 3;
 		rf.WriteFrame(Frame);
 	}
+
+	Frame[8] = 0x06;
+	Frame[17] = 0xC7;
+	for (int j = 0; j < 30; j++)
+	{
+		Frame[20] = j;
+		Frame[28] = j * 3;
+		rf.WriteFrame(Frame);
+	}
+
+	unsigned char FrameE[] = { 0x55, 0xAA,
+				0x16,0x00,0xFD,0x00,0x01,0x00,0x07,
+				19,10,31,15,30,00,
+				0xEB,0x90,0x00,0xD0,0x12,0x00,
+				10,3,5,0,
+				0xC1,0xA1,
+				0xEE
+	};
+	rf.WriteFrame(FrameE);
+	unsigned char FrameST[] = { 0x55, 0xAA,
+				0x14,0x00,0xFD,0x00,0x01,0x00,0x03,
+				19,10,31,15,30,00,
+				0x01,0x02,
+				0x03,0x00,0x00,0x02,0x00,0x00,
+				10,3,5,0,
+				0xC1,0xA1,
+				0xEE
+	};
+	rf.WriteFrame(FrameST);
+	unsigned char FrameST2[] = { 0x55, 0xAA,
+				0x14,0x00,0xFD,0x00,0x01,0x00,0x03,
+				19,10,31,15,30,00,
+				0x02,0x02,
+				0x03,0x00,0x10,0x00,0x00,0x00,
+				10,3,5,0,
+				0xC1,0xA1,
+				0xEE
+	};
+	rf.WriteFrame(FrameST2);
+	sf = rf.AnalysisFrameCache();
+	sf.WriteFile("", "AXS");
 	
-	rf.Run = 1000;
-	sf=rf.AnalysisFrameCache();
-	sf.WriteFile("", "");
 	cin >> i;
 }

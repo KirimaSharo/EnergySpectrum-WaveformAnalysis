@@ -122,7 +122,7 @@ IOLib::StateCode State(UCHAR8* Frame, int FLen, bool& CRC8,const CRC::Table<std:
 	{
 		ret.Sparam[i] = Frame[STPARAMPOS + i];
 	}
-	ret.STCode = *(USHORT16*)Frame[STCODEPOS];
+	ret.STCode = *(USHORT16*)(Frame + STCODEPOS);
 	return ret;
 }
 
